@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<div class="navbar-bantuan">
+
+    <h1>Bantuan</h1>
+    <a href="/">Home</a>
+    <a href="/tentang">Tentang Saya</a>
+    <a href="/bantuan">Bantuan</a>
+    <a href="/berita">Berita</a>
+</div>
+<body id="body-soal">
+  <div class="container-soal">
+    <div class="question-container">
+      <div class="question">
+        <h3>1. Halaman Ini digunakan Untuk Apa?</h3>
+        <button class="toggle-answer" data-target="answer1">Tampilkan Jawaban</button>
+      </div>
+      <div class="question">
+        <h3>2. Apa itu API? jelaskan!</h3>
+        <button class="toggle-answer" data-target="answer2">Tampilkan Jawaban</button>
+      </div>
+      <div class="question">
+        <h3>3. Api apa saja Yang Digunakan dalam aplikasi ini? jelaskan</h3>
+        <button class="toggle-answer" data-target="answer3">Tampilkan Jawaban</button>
+      </div>
+      <div class="question">
+        <h3>4. Salah satu pola arsitektur API adalah(RESTful API)</h3>
+        <button class="toggle-answer" data-target="answer4">Tampilkan Jawaban</button>
+      </div>
+    </div>
+    <div class="answer-container">
+      <p class="answer" id="answer1">1. Halaman ini digunakan untuk memberikan contoh tampilan pertanyaan dan jawaban dengan tombol "Tampilkan Jawaban" yang dapat digunakan untuk mengungkap jawaban dari pertanyaan.</p>
+      <p class="answer" id="answer2">2. API singkatan dari Application Programming Interface. Ini adalah kumpulan aturan dan protokol yang memungkinkan berbagai perangkat lunak atau aplikasi untuk berkomunikasi satu sama lain. API memungkinkan program-program untuk menggunakan fungsi-fungsi atau layanan-layanan yang disediakan oleh aplikasi atau platform lain tanpa perlu mengetahui bagaimana program tersebut bekerja secara internal.</p>
+      <p class="answer" id="answer3">3. APi yang digunakan adalah: <br>1. PositionStack API:API untuk informasi geolokasi berdasarkan koordinat atau alamat.</br>
+      2. Weatherspark API:API cuaca dengan data seperti suhu, kelembaban, dan kecepatan angin.</br>
+      3. Mediastack API:API berita dan informasi media dari berbagai sumber.</p>
+      <p class="answer" id="answer4">4. RESTful API adalah antarmuka pemrograman aplikasi yang mengikuti prinsip REST, menggunakan HTTP metode (GET, POST, PUT, DELETE) untuk berkomunikasi dengan sumber daya melalui URL, umumnya dalam format JSON atau XML, dan beroperasi dalam mode stateless, tanpa menyimpan status klien di server.</p>
+    </div>
+  </div>
+
+  <script>
+    const toggleButtons = document.querySelectorAll('.toggle-answer');
+
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const targetAnswer = document.getElementById(targetId);
+
+        if (targetAnswer.classList.contains('show')) {
+          targetAnswer.classList.remove('show');
+          button.textContent = 'Tampilkan Jawaban';
+        } else {
+          targetAnswer.classList.add('show');
+          button.textContent = 'Sembunyikan Jawaban';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

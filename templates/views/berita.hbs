@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{judul}}</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="navbar">
+
+        <h1>Berita</h1>
+        <a href="/">Home</a>
+        <a href="/tentang">Tentang Saya</a>
+        <a href="/bantuan">Bantuan</a>
+        <a href="/berita">Berita</a>
+    </div>
+    <h1 id=judul>{{judul}}</h1>
+    <p>Halaman berita oleh {{nama}}</p>
+
+    <div class="container">
+        {{#if berita}}
+            {{#each berita}}
+            <div class="news-item">
+                <h3>{{title}}</h3>
+                {{#if image}} <!-- Periksa apakah ada URL gambar -->
+                    <img src="{{image}}" alt="{{title}}">
+                {{/if}}
+                <p>{{description}}</p>
+                <a href="{{url}}" target="_blank">Baca lebih lanjut</a>
+            </div>
+            {{/each}}
+        {{else}}
+            <p>Tidak ada berita yang ditemukan.</p>
+        {{/if}}
+    </div>
+</body>
+</html>

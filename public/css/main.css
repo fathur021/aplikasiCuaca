@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+#judul {
+    text-align: center;
+    color:#fff;
+    margin-top: 70px;
+}
+
+p {
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.news-item img {
+    max-width: 100%;
+    max-height: 200px; /* Atur tinggi maksimum gambar sesuai kebutuhan Anda */
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.news-item p {
+    color: #555;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* Menerapkan tampilan berbeda untuk tautan baca lebih lanjut */
+.news-item a[target="_blank"]:after {
+    content: "(buka di jendela baru)";
+    font-size: 12px;
+    margin-left: 10px;
+    color: #999;
+}
+p{
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+.navbar {
+    background-color: #333;
+    width: 100%;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 0 90px;
+    position: fixed;
+    margin-top: -70px;
+    
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 30px;
+    padding-right: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .90);
+   
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding-left: 70px; 
+    margin: 0; 
+}
+
+.navbar a:hover {
+    transition: color 0.4s; 
+    text-shadow: 0 0 10px rgba(255, 255, 255, .90);
+}
