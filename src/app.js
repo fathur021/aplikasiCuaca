@@ -7,6 +7,8 @@ const hbs = require('hbs')
 const geocode =require('./utils/geocode')
 const forecast = require('./utils/prediksiCuaca')
 const berita = require('./utils/berita')
+const port = process.env.PORT || 3000 
+
 const direktoriPublic = path.join(__dirname, '../public')
 const direktoriViews = path.join(__dirname, '../templates/views')
 const direktoripartials = path.join(__dirname, '../templates/partials')
@@ -104,6 +106,6 @@ app.get('*', (req, res) => {
         pesanError: 'Halaman tidak ditemukan'
     })
 })
-app.listen(4000, () => {
-    console.log('<h1>Server berjalan pada port 4000.</h1>')
+app.listen(port, () => {
+    console.log('Server Berjalan pada port '+port)
 })
